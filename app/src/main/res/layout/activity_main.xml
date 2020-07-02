@@ -1,110 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="29dp"
+    android:background="@android:color/darker_gray"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/b_resta"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/boton_redondo"
-        android:text="-"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/b_multiplicacion"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <EditText
         android:id="@+id/v1"
-        android:layout_width="358dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="28dp"
-        android:ems="10"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:hint="Ingrese el Primer Valor"
+        android:background="@android:color/background_light"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/v2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/black"
+        />
+    <EditText
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Ingrese el Segundo Valor"
+        android:background="@android:color/background_light"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/black"
+        />
+
 
     <TextView
         android:id="@+id/tv_resultado"
-        android:layout_width="70dp"
-        android:layout_height="24dp"
+        android:layout_width="372dp"
+        android:layout_height="40dp"
         android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/background_light"
         android:text="Resultado"
-        app:layout_constraintEnd_toEndOf="@+id/v2"
-        app:layout_constraintStart_toStartOf="@+id/v2"
-        app:layout_constraintTop_toBottomOf="@+id/v2" />
 
-    <EditText
-        android:id="@+id/v2"
-        android:layout_width="358dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="128dp"
-        android:ems="10"
-        android:hint="Ingrese el Segundo Valor"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent" /><![CDATA[
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
 
-    app:layout_constraintEnd_toStartOf="@+id/b_multiplicacion"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        >
 
-    ]]>
+        <Button
+            android:id="@+id/b_suma"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/boton_redondo"
+            android:onClick="onClick"
+            android:text="+"
+            android:textSize="30sp" />
+
+
+    <Button
+        android:id="@+id/b_resta"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@+id/b_suma"
+        android:layout_toRightOf="@+id/b_suma"
+        android:background="@drawable/boton_redondo"
+        android:onClick="onClick"
+        android:text="-"
+        android:textSize="30sp"
+         />
 
     <Button
         android:id="@+id/b_multiplicacion"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/boton_redondo"
         android:text="*"
+        android:onClick="onClick"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/b_resta"
+        android:layout_toEndOf="@+id/b_resta"
         android:textSize="30sp"
-        android:background="@drawable/boton_redondo"
-        app:layout_constraintEnd_toStartOf="@+id/b_division"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        />
 
-    <Button
-        android:id="@+id/b_suma"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="+"
-        android:textSize="30sp"
-        android:background="@drawable/boton_redondo"
-        app:layout_constraintEnd_toStartOf="@+id/b_resta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        <Button
+            android:id="@+id/b_division"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/boton_redondo"
+            android:text="/"
+            android:onClick="onClick"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/b_multiplicacion"
+            android:layout_toEndOf="@+id/b_multiplicacion"
+            android:textSize="30sp"/>
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/b_division"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:text="/"
-        android:textSize="30sp"
-        android:background="@drawable/boton_redondo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+</LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
