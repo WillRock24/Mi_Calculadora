@@ -6,68 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/v1"
-        android:layout_width="358dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:hint="Ingrese el Primer Valor"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="79dp" />
-
-    <EditText
-        android:id="@+id/v2"
-        android:layout_width="358dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:hint="Ingrese el Segundo Valor"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="143dp" />
-
-    <Button
-        android:id="@+id/b_suma"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="+"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="289dp" />
-
     <Button
         android:id="@+id/b_resta"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/boton_redondo"
         android:text="-"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="289dp" />
+        app:layout_constraintEnd_toStartOf="@+id/b_multiplicacion"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-    <Button
-        android:id="@+id/b_multiplicacion"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="*"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="199dp"
-        tools:layout_editor_absoluteY="289dp" />
-
-    <Button
-        android:id="@+id/b_division"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="/"
-        android:textSize="30sp"
-        tools:layout_editor_absoluteX="293dp"
-        tools:layout_editor_absoluteY="289dp" />
+    <EditText
+        android:id="@+id/v1"
+        android:layout_width="358dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Ingrese el Primer Valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/v2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tv_resultado"
         android:layout_width="70dp"
         android:layout_height="24dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="246dp" />
+        android:layout_marginTop="36dp"
+        android:text="Resultado"
+        app:layout_constraintEnd_toEndOf="@+id/v2"
+        app:layout_constraintStart_toStartOf="@+id/v2"
+        app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+    <EditText
+        android:id="@+id/v2"
+        android:layout_width="358dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="128dp"
+        android:ems="10"
+        android:hint="Ingrese el Segundo Valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" /><![CDATA[
+
+    app:layout_constraintEnd_toStartOf="@+id/b_multiplicacion"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    ]]>
+
+    <Button
+        android:id="@+id/b_multiplicacion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="*"
+        android:textSize="30sp"
+        android:background="@drawable/boton_redondo"
+        app:layout_constraintEnd_toStartOf="@+id/b_division"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/b_suma"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="+"
+        android:textSize="30sp"
+        android:background="@drawable/boton_redondo"
+        app:layout_constraintEnd_toStartOf="@+id/b_resta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/b_division"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="/"
+        android:textSize="30sp"
+        android:background="@drawable/boton_redondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
