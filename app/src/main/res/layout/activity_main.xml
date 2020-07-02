@@ -7,53 +7,67 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/v1"
         android:layout_width="358dp"
         android:layout_height="44dp"
         android:ems="10"
+        android:hint="Ingrese el Primer Valor"
         android:inputType="number"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="79dp" />
 
     <EditText
-        android:id="@+id/editTextNumber3"
+        android:id="@+id/v2"
         android:layout_width="358dp"
         android:layout_height="44dp"
         android:ems="10"
+        android:hint="Ingrese el Segundo Valor"
         android:inputType="number"
         tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="164dp" />
+        tools:layout_editor_absoluteY="143dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:id="@+id/b_suma"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textSize="30sp"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="289dp" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="157dp"
+        android:id="@+id/b_resta"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="-"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="117dp"
         tools:layout_editor_absoluteY="289dp" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="292dp"
+        android:id="@+id/b_multiplicacion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="*"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="199dp"
         tools:layout_editor_absoluteY="289dp" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="380dp" />
+        android:id="@+id/b_division"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="/"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="293dp"
+        tools:layout_editor_absoluteY="289dp" />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="70dp"
+        android:layout_height="24dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="246dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
